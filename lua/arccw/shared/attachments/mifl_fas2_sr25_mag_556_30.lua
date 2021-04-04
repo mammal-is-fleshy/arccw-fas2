@@ -10,7 +10,7 @@ att.SortOrder = 30 + 100
 att.AutoStats = true
 att.Slot = {"mifl_fas2_sr25_mag"}
 
-att.Override_ClipSize = 20
+att.Override_ClipSize = 30
 
 att.Mult_AccuracyMOA = 3
 att.Mult_RPM = 1.1
