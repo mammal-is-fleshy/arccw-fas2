@@ -185,7 +185,7 @@ SWEP.AttachmentElements = {
         },
     },
     ["mifl_fas2_famas_barrel_felin"] = {
-        NameChange = "FSL Valorisé",
+        NameChange = "FSL Valorisée",
         TrueNameChange = "FAMAS Félin",
         VMBodygroups = {
             {ind = 1, bg = 2},

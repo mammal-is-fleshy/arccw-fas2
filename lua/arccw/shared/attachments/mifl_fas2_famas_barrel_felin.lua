@@ -1,4 +1,4 @@
-att.PrintName = "La Valorisé"
+att.PrintName = "La Valorisée"
 att.Icon = Material("entities/arccw_mifl_fas2_famas_hg_felin.png", "mips smooth")
 att.Description = "Compact frame but longer barrel for the FAMAS, promptly ruining the point of a bullpup but adding more range."
 att.SortOrder = 10
