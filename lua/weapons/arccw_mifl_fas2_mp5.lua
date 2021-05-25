@@ -569,17 +569,21 @@ SWEP.Hook_SelectReloadAnimation = function(wep, anim) --- hierarchy ---
     local kurz = wep.Attachments[2].Installed == "mifl_fas2_mp5_hg_k" or wep.Attachments[2].Installed == "mifl_fas2_mp5_ump_k" or wep.Attachments[2].Installed == "mifl_fas2_mp5_hg_mw2"
     local eighty = wep.Attachments[7].Installed == "mifl_fas2_mp5_mag_80" or wep.Attachments[7].Installed == "mifl_fas2_mp5_mag_20_70" or wep.Attachments[7].Installed == "mifl_fas2_mp5_mag_waffle_80"
 
-    if wep.Attachments[8].Installed  then
-        return anim .. "_akimbo"
+    local new_anim = anim
+
+    if wep.Attachments[8].Installed then
+        new_anim = anim .. "_akimbo"
     elseif (kurz or onehand) and eighty then
-        return anim .. "_k_80"
+        new_anim = anim .. "_k_80"
     elseif kurz then
-        return anim .. "_k"
+        new_anim = anim .. "_k"
     elseif onehand then
-        return anim .. "_one"
+        new_anim = anim .. "_one"
     elseif eighty then
-        return anim .. "_80"
+        new_anim = anim .. "_80"
     end
+
+    if wep.Animations[new_anim] then return new_anim end
 end
 
 SWEP.Animations = {
