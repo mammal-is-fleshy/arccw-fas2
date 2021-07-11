@@ -351,10 +351,7 @@ SWEP.Hook_SelectReloadAnimation = function(wep, anim)
 end
 
 SWEP.Animations = {
-    ["idle"] = {
-        Source = "idle",
-        Time = 0
-    },
+    ["idle"] = false,
     ["idle_empty"] = {
         Source = "idle_empty"
     },

@@ -252,10 +252,7 @@ SWEP.Hook_SelectFireAnimation = function(wep, anim)
 end
 
 SWEP.Animations = {
-    ["idle"] = {
-        Source = "idle",
-		Time = 0
-    },
+    ["idle"] = false,
     ["ready"] = {
         Source = "draw",
     },
