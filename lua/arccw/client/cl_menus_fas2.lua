@@ -1,7 +1,7 @@
 -- stole yo shit
 
 hook.Add( "PopulateToolMenu", "ArcCW_FAS2_Options", function()
-    spawnmenu.AddToolMenuOption( "Utilities", "ArcCW", "ArcCW_FAS2_Options", "FAS:2", "", "", ArcCW_FAS2_Options)
+    spawnmenu.AddToolMenuOption( "Options", "ArcCW", "ArcCW_FAS2_Options", "FAS:2", "", "", ArcCW_FAS2_Options)
 end )
 
 local fas2cvars = {

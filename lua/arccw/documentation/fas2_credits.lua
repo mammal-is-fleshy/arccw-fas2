@@ -42,7 +42,7 @@ slogkot (Fluffy Mammal)
 
 Fesiug
 -akimbo (barely works but ok)
--rewriting nomen
+-rewriting nomen -- also break it
 -damped burst
 -spawnicon
 -qci
