@@ -23,6 +23,7 @@ att.SortOrder = 700 + 70
 att.AddSuffix = " + Deagle"
 
 att.MountPositionOverride = 0
+att.Override_NoHideLeftHandInCustomization = true
 
 att.Model = "models/weapons/arccw/mifl_atts/fas2/c_deagle.mdl"
 

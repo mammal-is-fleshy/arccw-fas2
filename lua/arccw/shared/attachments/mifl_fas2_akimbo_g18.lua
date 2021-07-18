@@ -22,6 +22,7 @@ att.SortOrder = 700 + 30*0.85
 att.AddSuffix = " + G18"
 
 att.MountPositionOverride = 0
+att.Override_NoHideLeftHandInCustomization = true
 
 att.Model = "models/weapons/arccw/mifl_atts/fas2/c_g20.mdl"
 att.ModelBodygroups = "011"

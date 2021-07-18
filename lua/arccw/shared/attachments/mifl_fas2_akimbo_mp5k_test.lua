@@ -23,6 +23,7 @@ att.SortOrder = 700 + 21
 att.AddSuffix = " + MP5K"
 
 att.MountPositionOverride = 0
+att.Override_NoHideLeftHandInCustomization = true
 
 att.Model = "models/weapons/arccw/mifl_atts/fas2/c_mp5k.mdl"
 

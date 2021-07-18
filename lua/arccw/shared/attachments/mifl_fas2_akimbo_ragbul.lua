@@ -21,6 +21,7 @@ att.ModelScale = Vector(1, 1, 1)
 att.SortOrder = 700 + 120
 
 att.AddSuffix = " + Raging Bull"
+att.Override_NoHideLeftHandInCustomization = true
 
 att.MountPositionOverride = 0
 

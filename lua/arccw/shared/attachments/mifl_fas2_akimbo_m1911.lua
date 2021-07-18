@@ -23,6 +23,7 @@ att.SortOrder = 700 + 35
 att.AddSuffix = " + M1911"
 
 att.MountPositionOverride = 0
+att.Override_NoHideLeftHandInCustomization = true
 
 att.Model = "models/weapons/arccw/mifl_atts/fas2/c_m1911.mdl"
 
