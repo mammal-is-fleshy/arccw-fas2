@@ -1,0 +1,16 @@
+"vertexlitgeneric"
+{
+	"$baseTexture" "models/player/blue/fas_blue_body"
+	"$bumpmap" "models/player/blue/fas_blue_body_normal"
+	$phongexponenttexture "models/albedotint"
+
+	$phong 1
+	$phongboost "1"
+	$phongexponent 5
+	$phongfresnelranges "[0.25 0.75 1]"
+//	$phongtint "[.92 .90 .85]"
+	$phongdisablehalflambert 1
+	$halflambert 0
+	$PhongAlbedoTint 1
+
+}

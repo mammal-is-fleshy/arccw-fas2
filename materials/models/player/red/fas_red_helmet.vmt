@@ -1,0 +1,16 @@
+"vertexlitgeneric"
+{
+	"$baseTexture" "models/player/red/fas_red_helmet"
+	"$bumpmap" "models/player/red/fas_red_helmet_normal"
+	$phongexponenttexture "models/albedotint"
+
+	$phong 1
+	$phongboost 1
+	$phongexponent 5
+	$phongfresnelranges "[0.25 0.75 1]"
+//	$phongtint "[.92 .90 .85]"
+	$phongdisablehalflambert 1
+	$halflambert 0
+	$PhongAlbedoTint 1
+
+}

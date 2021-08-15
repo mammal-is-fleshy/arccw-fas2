@@ -1,0 +1,16 @@
+"vertexlitgeneric"
+{
+	"$baseTexture" "models/player/shared/sharedgear"
+	"$bumpmap" "models/player/shared/sharedgear_normal"
+	"$PhongExponentTexture" "models/albedotint"
+	
+	$nodecal 1
+	$phong 1
+	$phongboost "2"
+	$phongexponent 15
+	$phongfresnelranges "[0.5 0.7 1]"
+	$phongdisablehalflambert 1
+	$halflambert 0
+	$PhongAlbedoTint 1
+
+}

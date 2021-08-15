@@ -1,0 +1,11 @@
+"vertexlitgeneric"
+{
+	"$baseTexture" "models/player/shared/goggles_glass"
+	"$translucent" 1
+        "$envmap" 	"env_cubemap"
+	"$envmapcontrast" 0.6
+	"$envmapsaturation" 0.8
+	"$envmaptint" "[ 0.3 0.3 0.3 ]"
+
+	$nodecal 1
+}

@@ -1,0 +1,13 @@
+"vertexlitgeneric"
+{
+	"$baseTexture" "models/player/red/fas_red_armor"
+	"$bumpmap" "models/player/red/fas_red_armor_normal"
+$halflambert 1
+$phong 1
+$phongboost "0.1"
+$phongexponent 35
+//$phongtint "[.85 .85 1]"
+$phongfresnelranges "[1 1 1]"
+
+	$nodecal 1
+}

@@ -1,0 +1,10 @@
+"vertexlitgeneric"
+{
+	"$basetexture" "models\player\shared/eyes_green"
+        "$bumpmap" "models/player/shared/Eyes_Normal"
+	"$phong" "1"
+	"$phongexponent" 	"60"
+	"$phongboost"	"2.0"
+	"$phongfresnelranges"	"[1.0 1.1 1.2]"
+	"$halflambert" 1
+}

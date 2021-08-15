@@ -1,0 +1,6 @@
+"vertexlitgeneric"
+{
+	"$baseTexture" "models/player/shared/mouth"
+	"$alphatest" "1"
+
+}

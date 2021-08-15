@@ -1,0 +1,17 @@
+"vertexlitgeneric"
+{
+	"$baseTexture" "models/player/shared/gore"
+        "$bumpmap" "models/player/shared/gorenormal"
+
+	$phong 1
+	$phongboost "2"
+	$phongexponent 20
+	$phongfresnelranges "[1.5 0.75 1]"
+	$phongdisablehalflambert 1
+	$halflambert 0
+	$PhongAlbedoTint 1
+
+	$rimlight 1
+	$rimlightexponent 15
+	$rimlightboost "1"
+}

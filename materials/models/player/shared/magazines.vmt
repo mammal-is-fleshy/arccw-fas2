@@ -1,0 +1,6 @@
+"vertexlitgeneric"
+{
+	"$baseTexture" "models/player/shared/magazines"
+
+	$nodecal 1
+}

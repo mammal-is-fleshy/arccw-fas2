@@ -1,0 +1,19 @@
+"vertexlitgeneric"
+{
+	"$baseTexture" "models/player/shared/shemagh"
+	"$bumpmap" "models/player/shared/shemagh_normal"
+	"$PhongExponentTexture" "models/albedotint"
+
+	$phong 1
+	$phongboost "5"
+	$phongexponent 10
+	$phongfresnelranges "[0.8 1 2]"
+	$phongdisablehalflambert 1
+	$halflambert 0
+	$PhongAlbedoTint 1
+
+	"$detail"		"models/player/shared/fabric_detail"
+	"$detailscale"		"4"
+	"$detailblendfactor"	"0.75"
+	"$detailblendmode"	"0"
+}

@@ -1,0 +1,6 @@
+"vertexlitgeneric"
+{
+	"$baseTexture" "models/player/shared/goggles"
+	
+	$nodecal 2
+}

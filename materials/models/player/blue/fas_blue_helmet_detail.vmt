@@ -1,0 +1,24 @@
+"vertexlitgeneric"
+//"editor_shader"
+{
+//	"$shadername"	"model_detailnormal"
+	"$baseTexture" "models/player/blue/fas_blue_helmet"
+	"$bumpmap" "models/player/blue/fas_blue_helmet_normal"
+	$phongexponenttexture "models/albedotint"
+
+	$phong 1
+	$phongboost 1
+	$phongexponent 1
+	$phongfresnelranges "[0.25 0.75 1]"
+//	$phongtint "[.92 .90 .85]"
+	$phongdisablehalflambert 1
+	$halflambert 0
+	$PhongAlbedoTint 1
+
+	$detail		"detail/fas_fabric_detail3"
+	$detailscale	15
+	$detailblendfactor	1
+	$detailblendmode	0
+	
+	$nodecal 1
+}

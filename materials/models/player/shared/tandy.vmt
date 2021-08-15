@@ -1,0 +1,14 @@
+"vertexlitgeneric"
+{
+	"$baseTexture" "models/player/shared/Tandy"
+        "$bumpmap" "models/player/shared/andynormal"
+	"$PhongExponentTexture" "models/player/shared/Andy_exp"
+
+	$phong 1
+	$phongboost "2"
+	$phongexponent 20
+	$phongfresnelranges "[1.5 0.75 1]"
+	$phongdisablehalflambert 1
+	$halflambert 0
+	$PhongAlbedoTint 1
+}
