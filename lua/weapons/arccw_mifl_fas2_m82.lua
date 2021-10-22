@@ -33,7 +33,7 @@ SWEP.Damage = 250
 SWEP.DamageMin = 90 -- damage done at maximum range
 SWEP.Range = 250 -- in METRES
 SWEP.Penetration = 45
-SWEP.DamageType = DMG_BULLET + DMG_BLAST + DMG_AIRBOAT -- Airboat damages hurts the combine helicopter
+SWEP.DamageType = DMG_BULLET + DMG_AIRBOAT
 SWEP.ShootEntity = nil -- entity to fire, if any
 SWEP.MuzzleVelocity = 6000 -- projectile or phys bullet muzzle velocity
 -- IN M/S
@@ -318,6 +318,7 @@ SWEP.Animations = {
         LHIK = true,
         LHIKIn = 0.2,
         LHIKOut = 0,
+		Mult = 0.7,
     },
     ["exit_bipod"] = {
         Source = "bipod_up",
@@ -325,6 +326,7 @@ SWEP.Animations = {
         LHIK = true,
         LHIKIn = 0,
         LHIKOut = 0.4,
+		Mult = 0.7,		
     },
     ["reload_bipod"] = {
         Source = "bipod_reload",
