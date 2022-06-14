@@ -358,8 +358,6 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     if wep.Attachments[1].Installed then vm:SetBodygroup(6, 0) end
 end
 
-SWEP.ExtraSightDist = 10
-
 SWEP.WorldModelOffset = {
     pos = Vector(-16, 5.5, -6),
     ang = Angle(-10, 0, 180)
@@ -379,7 +377,6 @@ SWEP.Attachments = {
             wpos = Vector(22, 1, -7),
             wang = Angle(-9.79, 0, 180)
         },
-        ExtraSightDist = 8,
         VMScale = Vector(1.2, 1.2, 1.2)
     },
     {
@@ -565,25 +562,23 @@ function SWEP:Hook_NameChange(name)
 end
 
 SWEP.Hook_SelectReloadAnimation = function(wep, anim) --- hierarchy ---
+    local nomened = wep.Attachments[11].Installed == "mifl_fas2_perk_nomen"
     local onehand = wep.Attachments[2].Installed == "mifl_fas2_mp5_hg_no"
     local kurz = wep.Attachments[2].Installed == "mifl_fas2_mp5_hg_k" or wep.Attachments[2].Installed == "mifl_fas2_mp5_ump_k" or wep.Attachments[2].Installed == "mifl_fas2_mp5_hg_mw2"
     local eighty = wep.Attachments[7].Installed == "mifl_fas2_mp5_mag_80" or wep.Attachments[7].Installed == "mifl_fas2_mp5_mag_20_70" or wep.Attachments[7].Installed == "mifl_fas2_mp5_mag_waffle_80"
 
-    local new_anim = anim
 
-    if wep.Attachments[8].Installed then
-        new_anim = anim .. "_akimbo"
-    elseif (kurz or onehand) and eighty then
-        new_anim = anim .. "_k_80"
-    elseif kurz then
-        new_anim = anim .. "_k"
-    elseif onehand then
-        new_anim = anim .. "_one"
-    elseif eighty then
-        new_anim = anim .. "_80"
-    end
+    if wep.Attachments[8].Installed then return anim .. "_akimbo" end
+    if (kurz or onehand) and eighty then return anim .. "_k_80" end
+    if eighty then return anim .. "_80" end
 
-    if wep.Animations[new_anim] then return new_anim end
+	
+    if kurz then return anim .. "_k" end
+    if onehand then return anim .. "_one" end	
+
+
+    if kurz and nomened then return anim .. "_nomen_k" end
+    if onehand and nomened then return anim .. "_nomen_one" end
 end
 
 SWEP.Animations = {
@@ -706,7 +701,7 @@ SWEP.Animations = {
         Source = "reload_nomen",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
     },
-    ["reload_nomen_empty_k"] = {
+    ["reload_empty_nomen_k"] = {
         Source = "reload_empty_nomen_k",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         LHIK = true,

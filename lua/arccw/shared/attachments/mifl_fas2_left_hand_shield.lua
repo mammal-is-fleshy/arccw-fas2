@@ -1,9 +1,9 @@
 att.PrintName = "Shield"
 att.Icon = Material("entities/arccw_mifl_lhand_shield.png", "smooth")
 att.Description = "SHOE"
-att.Hidden = true
+att.Hidden = false
 att.Desc_Pros = {
-    "may or may not block bullets",
+    "May or may not block bullets",
 }
 att.Desc_Cons = {
     "- Cannot use ironsights"
@@ -11,13 +11,14 @@ att.Desc_Cons = {
 att.AutoStats = true
 att.Mult_HipDispersion = 2
 att.Slot = "mifl_fas2_lhand_shield"
+att.Override_HoldtypeActive = "pistol"
 
 att.ModelOffset = Vector(10, -7, -7)
 
 att.GivesFlags = {"handlocked"}
 
-att.ShieldCorrectAng = Angle(0, 0, 0)
-att.ShieldCorrectPos = Vector(0, 0, 5)
+att.ShieldCorrectAng = Angle(0, -180, 0)
+att.ShieldCorrectPos = Vector(0, 0, -10)
 
 att.SortOrder = 1
 
@@ -50,11 +51,19 @@ end
 --- nopog ---
 
 att.UBGL_Reload = function(wep, ubgl) ---- how 2 no play reload anim when clip1 = full halp ????? ----
-
+	if wep:Clip1() != (wep:Clip1() + 1) then
     wep:Reload()
         wep:DoLHIKAnimation("reload", 130/60)
         wep:SetNextSecondaryFire(CurTime() + 130/60)
         wep:PlaySoundTable({
-            {s = "weapons/arccw_mifl/gso/glock18/glock_clipout.wav", 	t = 13/60},	--- woooosh ---	
-        })
+        {s = "Arccw_FAS2_Generic.Cloth_Movement" ,		t = 0},
+    })
+	else
+	end
+		
 end
+
+
+
+
+

@@ -125,6 +125,13 @@ SWEP.AttachmentElements = {
         Override_HolsterPos = Vector(2,2,2),
         Override_HolsterAng = Angle(-20, 0, -5),			
     },
+    ["shield"] = {
+        Override_ActivePos = Vector(8, 2, 0),
+        Override_CrouchPos = Vector(0, -3, 0),	
+        Override_CrouchAng = Angle(0, 0, 0),	
+        Override_HolsterPos = Vector(2,2,2),
+        Override_HolsterAng = Angle(-20, 0, -5),			
+    },	
     ["mifl_fas2_mp5_stock_pdw"] = {
         VMBodygroups = {{ind = 6, bg = 5}}
     },
@@ -295,7 +302,19 @@ SWEP.Attachments = {
         InstalledEles = {"akimbo"},
         ExcludeFlags = {"Akimbo_No"},	
 		GivesFlags = {"Akimbo_No1"},		
+        MergeSlots = {8}		
     },
+    {
+        Hidden = true,
+        Slot = {"mifl_fas2_lhand_shield"},
+        Bone = "Akimbo_Base",
+        DefaultAttName = "None",
+        Offset = {
+            vpos = Vector(3, -1.2, 0.8),
+            vang = Angle(0, 0, 0)
+        },
+        InstalledEles = {"shield"}
+    },	
     {
         PrintName = "Stock",
         Slot = {"go_stock", "mifl_fas2_m11_stock", "mifl_fas2_uni_stock"},
@@ -333,7 +352,7 @@ SWEP.Hook_SelectReloadAnimation = function(wep, anim)
     local fls = wep.Attachments[6].Installed == "mifl_fas2_m11_mag_16"
     local drm = wep.Attachments[6].Installed == "mifl_fas2_m11_mag_64"
 
-    if wep.Attachments[7].Installed then
+    if wep.Attachments[7].Installed or wep.Attachments[8].Installed then
         return anim .. "_akimbo"
     end
 
@@ -559,17 +578,21 @@ SWEP.Animations = {
     ["reload_akimbo"] = {
         Source = "reload_akimbo",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
+		Mult = 0.7
     },
     ["reload_empty_akimbo"] = {
         Source = "reload_empty_akimbo",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
+		Mult = 0.7
     },
     ["reload_nomen_akimbo"] = {
         Source = "reload_akimbo_nomen",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
+		Mult = 0.6	
     },
     ["reload_nomen_empty_akimbo"] = {
         Source = "reload_empty_akimbo_nomen",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
+		Mult = 0.6		
     },
 }

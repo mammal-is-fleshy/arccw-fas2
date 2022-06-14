@@ -297,6 +297,17 @@ SWEP.Attachments = {
         VMScale = Vector(1.2, 1.2, 1.2),
         ExtraSightDist = 3
     },
+   {				-- why dis no work :((((((((((((((((((((((((((((((((((((((
+        PrintName = "",
+        Slot = "mifl_integral_lhik_fas2",
+        Bone = "Dummy01",
+        Integral = true,
+        Hidden = false,
+        Offset = {
+            vpos = Vector(12, 1, -0.5),
+            vang = Angle(0, 0, -90),
+        }
+    },	
     {
         PrintName = "Handguard",
         Slot = "mifl_fas2_g36c_hg",
@@ -389,18 +400,6 @@ SWEP.Attachments = {
             vpos = Vector(5, 0, -1),
             vang = Angle(0, 0, -90),
         },
-    },
-
-   {				-- why dis no work :((((((((((((((((((((((((((((((((((((((
-        PrintName = "",
-        Slot = "mifl_integral_lhik_fas2",
-        Bone = "Dummy01",
-        Integral = true,
-        Hidden = false,
-        Offset = {
-            vpos = Vector(12, 1, -0.5),
-            vang = Angle(0, 0, -90),
-        }
     },
 }
 

@@ -134,6 +134,13 @@ SWEP.AttachmentElements = {
         Override_HolsterPos = Vector(2,2,2),
         Override_HolsterAng = Angle(-20, 0, -5),
     },
+    ["shield"] = {
+        Override_ActivePos = Vector(8, 0, -1),
+        Override_CrouchPos = Vector(0, -3, 0),	
+        Override_CrouchAng = Angle(0, 0, 0),	
+        Override_HolsterPos = Vector(2,2,2),
+        Override_HolsterAng = Angle(-20, 0, -5),			
+    },		
     ["rail"] = {
         VMBodygroups = {{ind = 5, bg = 1}},
     },
@@ -238,7 +245,19 @@ SWEP.Attachments = {
         InstalledEles = {"akimbo"},
         ExcludeFlags = {"Akimbo_No"},
         GivesFlags = {"Akimbo_No1"},
+        MergeSlots = {7}		
     },
+    {
+        Hidden = true,
+        Slot = {"mifl_fas2_lhand_shield"},
+        Bone = "Akimbo_Base",
+        DefaultAttName = "None",
+        Offset = {
+            vpos = Vector(3, -1.2, 0.8),
+            vang = Angle(0, 0, 0)
+        },
+        InstalledEles = {"shield"}
+    },	
     {
         PrintName = "Stock",
         Slot = {"mifl_fas2_ks23_stock"},
@@ -272,7 +291,7 @@ SWEP.Attachments = {
 SWEP.Hook_SelectReloadAnimation = function(wep, anim)
     local oneb = wep.Attachments[4].Installed == "mifl_fas2_toz_bar_1x_l" or wep.Attachments[4].Installed == "mifl_fas2_toz_bar_1x_s" or wep.Attachments[4].Installed == "mifl_fas2_toz_bar_1x_sd"
 
-    if wep.Attachments[6].Installed then
+    if wep.Attachments[6].Installed or wep.Attachments[7].Installed then
         return anim .. "_akimbo"
     end
 
