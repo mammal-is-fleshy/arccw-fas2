@@ -120,8 +120,6 @@ SWEP.BarrelLength = 24
 
 SWEP.AttachmentElements = {}
 
-SWEP.ExtraSightDist = 20
-
 SWEP.WorldModelOffset = {
     pos = Vector(-15, 7, -6),
     ang = Angle(-10, 0, 180)
@@ -185,8 +183,6 @@ SWEP.Attachments = {
             vpos = Vector(-5, -2.5, 0),
             vang = Angle(0, 0, -90),
         },
-        CorrectiveAng = Angle(0, 0, 0),
-        CorrectivePos = Vector(-0.095, 0, 0.49),
         InstalledEles = {"rail", "nors"},
     },
     {
