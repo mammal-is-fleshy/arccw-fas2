@@ -17,8 +17,8 @@ att.ModelOffset = Vector(10, -7, -7)
 
 att.GivesFlags = {"handlocked"}
 
-att.ShieldCorrectAng = Angle(0, -180, 0)
-att.ShieldCorrectPos = Vector(0, 0, -10)
+att.ShieldCorrectAng = Angle(0, 180, 0)
+att.ShieldCorrectPos = Vector(2, 10, 0)
 
 att.SortOrder = 1
 
@@ -51,19 +51,14 @@ end
 --- nopog ---
 
 att.UBGL_Reload = function(wep, ubgl) ---- how 2 no play reload anim when clip1 = full halp ????? ----
-	if wep:Clip1() != (wep:Clip1() + 1) then
+
+	if wep:Clip1() == wep:Clip1()  then
     wep:Reload()
-        wep:DoLHIKAnimation("reload", 130/60)
-        wep:SetNextSecondaryFire(CurTime() + 130/60)
+        wep:DoLHIKAnimation("reload", 140/60)
+        wep:SetNextSecondaryFire(CurTime() + 140/60)
         wep:PlaySoundTable({
         {s = "Arccw_FAS2_Generic.Cloth_Movement" ,		t = 0},
     })
 	else
 	end
-		
 end
-
-
-
-
-

@@ -125,6 +125,13 @@ SWEP.AttachmentElements = {
         Override_HolsterPos = Vector(2,2,3),
         Override_HolsterAng = Angle(-20, 0, -5),	
     },
+    ["shield"] = {
+        Override_ActivePos = Vector(8, 0, 1),
+        Override_CrouchPos = Vector(8, -3, 0),	
+        Override_CrouchAng = Angle(0, 0, 0),	
+        Override_HolsterPos = Vector(2,2,2),
+        Override_HolsterAng = Angle(-20, 0, -5),			
+    },		
     ["buftube"] = {
         VMBodygroups = {
             {ind = 5, bg = 6},
@@ -451,7 +458,19 @@ SWEP.Attachments = {
         },
         InstalledEles = {"akimbo"},
         RequireFlags = {"Akimbo_Yes"},
+        MergeSlots = {9}		
     },
+    {
+        Hidden = true,
+        Slot = {"mifl_fas2_lhand_shield"},
+        Bone = "Akimbo_Base",
+        DefaultAttName = "None",
+        Offset = {
+            vpos = Vector(3, -1.2, -1),
+            vang = Angle(0, 0, 0)
+        },
+        InstalledEles = {"shield"}
+    },	
     {
         PrintName = "Stock",
         Slot = {"go_stock", "mifl_fas2_mp5_stock", "mifl_fas2_uni_stock"},
@@ -568,7 +587,7 @@ SWEP.Hook_SelectReloadAnimation = function(wep, anim) --- hierarchy ---
     local eighty = wep.Attachments[7].Installed == "mifl_fas2_mp5_mag_80" or wep.Attachments[7].Installed == "mifl_fas2_mp5_mag_20_70" or wep.Attachments[7].Installed == "mifl_fas2_mp5_mag_waffle_80"
 
 
-    if wep.Attachments[8].Installed then return anim .. "_akimbo" end
+    if wep.Attachments[8].Installed or wep.Attachments[9].Installed then return anim .. "_akimbo" end
     if (kurz or onehand) and eighty then return anim .. "_k_80" end
     if eighty then return anim .. "_80" end
 

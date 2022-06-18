@@ -188,6 +188,10 @@ SWEP.AttachmentElements = {
     },
     ["shield"] = {
         Override_ActivePos = Vector(8, 0, 0),
+        Override_CrouchPos = Vector(8, -3, 0),	
+        Override_CrouchAng = Angle(0, 0, 0),
+        Override_HolsterPos = Vector(2,2,2),
+        Override_HolsterAng = Angle(-20, 0, -5),			
     },
     ["ump_roni"] = {
         VMBodygroups = {	{ind = 2, bg = 4}, {ind = 3, bg = 1}, {ind = 4, bg = 1}	},
