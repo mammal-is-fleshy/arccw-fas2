@@ -119,6 +119,7 @@ SWEP.CustomizeAng = Angle(10, 15, 15)
 SWEP.BarrelLength = 24
 
 SWEP.AttachmentElements = {}
+SWEP.ExtraSightDist = 5
 
 SWEP.WorldModelOffset = {
     pos = Vector(-15, 7, -6),
