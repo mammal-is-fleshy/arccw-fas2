@@ -25,7 +25,7 @@ att.Add_BarrelLength = 15
 
 att.AdditionalSights = {
     {
-        Pos = Vector(-0.2, 20, -6.22),
+        Pos = Vector(0, 32, -3.63),
         Ang = Angle(0, 0, 0),
         Magnification = 2,
         ScrollFunc = ArcCW.SCROLL_ZOOM,
@@ -45,9 +45,9 @@ att.HolosightMagnificationMin = 4
 att.HolosightMagnificationMax = 4
 att.HolosightReticle = Material("mifl_fas2_reticle/g36.png", "mips smooth")
 att.HolosightNoFlare = true
-att.HolosightSize = 4
+att.HolosightSize = 10
 att.HolosightBone = "holosight"
 att.Colorable = true
 att.HolosightBlackbox = true
 
-att.ModelOffset = Vector(-8, 0.2, 4.75)
+att.ModelOffset = Vector(-24, -0.01, 2.15)
